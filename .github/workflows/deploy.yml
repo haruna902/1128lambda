@@ -17,8 +17,10 @@ jobs:
       - name: configure-aws-credentials
         uses: aws-actions/configure-aws-credentials@master
         with:
-          aws-region: ${{ secrets.AWS_REGION }}
-          role-to-assume: ${{ secrets.AWS_ROLE_ARN }}
+#           aws-region: ${{ secrets.AWS_REGION }}
+#           role-to-assume: ${{ secrets.AWS_ROLE_ARN }}
+          aws-region: ap-northeast-1
+          role-to-assume: arn:aws:iam::942928856180:role/1125hw
           role-session-name: GitHubActions
 
       - name: get-caller-identity is allowed to run on role.
